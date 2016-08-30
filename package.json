@@ -1,27 +1,28 @@
 {
-  "name": "node-cal-e-mccal",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nss-day-cohort-14/node-cal-e-mccal.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nss-day-cohort-14/node-cal-e-mccal/issues"
-  },
-  "homepage": "https://github.com/nss-day-cohort-14/node-cal-e-mccal#readme",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.0.2"
-  }
+    "name": "node-cal-e-mccal",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha -R nyan",
+        "coverage": "istanbul cover _mocha -- -R nyan"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nss-day-cohort-14/node-cal-e-mccal.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nss-day-cohort-14/node-cal-e-mccal/issues"
+    },
+    "homepage": "https://github.com/nss-day-cohort-14/node-cal-e-mccal#readme",
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "istanbul": "^0.4.5",
+        "mocha": "^3.0.2"
+    }
 }

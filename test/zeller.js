@@ -1,38 +1,32 @@
-const zeller = require('../lib/zeller.js')
-
+'use strict'
 
 const {
-    isFunction, deepEqual
-} = require('chai').assert;
-
-
+    isFunction, oneOf
+} = require('chai').assert
+const zeller = require('../lib/zeller')
 
 describe('zeller', () => {
-    it("should be a function", () => {
-        isFunction(zeller)
+    describe('math', () => {
+        it("should be a function", () => {
+            isFunction(math)
+        })
     })
-    it('should handle no arguments', () => {
-        const args = []
-        const expected = {
-            count: 1,
-            sides: 6
-        }
-        deepEqual(zeller(args), expected)
+    describe('math', function() {
+        it('should include a today', () => {
+            let today = ''
+            oneOf(math(), [math(today)])
+        })
     })
-    it('should handle one arguments', () => {
-        const args = [0]
-        const expected = {
-            count: 0,
-            sides: 1
-        }
-        deepEqual(zeller(args), expected)
+    describe('math', function() {
+        it('should include q', () => {
+            let q = ''
+            oneOf(math(), [math(q)])
+        })
     })
-    it('should handle two arguments', () => {
-        const args = [0, 1]
-        const expected = {
-            count: 0,
-            sides: 1
-        }
-        deepEqual(zeller(args), expected)
+    describe('math', function() {
+        it('results should be under 7', () => {
+
+            oneOf(math(), [(5)])
+        })
     })
 })

@@ -4,6 +4,5 @@
 
 
 
-const calc = require('../lib/cal')
-const fs = require('fs')
-const cal = require('/usr/bin/cal')
+const cal = require('../lib/cal')
+const zeller = require('../lib/zeller')
