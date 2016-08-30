@@ -1,2 +1,9 @@
 #!/usr/bin/env node
-const cal = require('../lib/cal')
+
+'use strict'
+
+
+
+const calc = require('../lib/cal')
+const fs = require('fs')
+const cal = require('/usr/bin/cal')
