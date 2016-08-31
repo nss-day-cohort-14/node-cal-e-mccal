@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
+
 'use strict'
-
-
 
 const cal = require('../lib/cal')
 const zeller = require('../lib/zeller')
