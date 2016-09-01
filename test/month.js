@@ -1,15 +1,44 @@
-const { isFunction, oneOf } = require('chai').assert
+const { assert } = require('chai')
+const {checkMonth, monthToString, setHeader} = require('../lib/month')
 const { expect } = require("chai");
-const { getMonth } = require('../lib/month')
-// describe('month', () => {
-//   describe('getMonth', () => {
-//     it('should be a function', () => {
-//       isFunction(getMonth)
-//     })
-//   })
-//   it('should return a number between 0 and 11', () => {
-//       let test = getMonth()
-//       expect(test).to.be.oneOf([0,1,2,3,4,5,6,7,8,9,10,11]);
-//
-//   })
-// })
+
+describe('month', () => {
+    describe('checkMonth', () => {
+        it('should be a function', () => {
+            assert.isFunction(checkMonth)
+        })
+        it('should return the number from Zeller', () => {
+            assert.deepEqual(checkMonth(2), 14);
+        })
+      })
+      describe('monthToString', () => {
+          it('should be a function', () => {
+              assert.isFunction(monthToString)
+          })
+          it('should return a string for a given month number', () => {
+            value = monthToString(13)
+              expect(value).to.equal("January")
+          })
+          it('should return a string for a given month number', () => {
+            value = monthToString(3)
+              expect(value).to.equal("March")
+          })
+        })
+      describe('setHeader', () => {
+          it('should be a function', () => {
+              assert.isFunction(setHeader)
+          })
+          it('will return a string value', () => {
+            var value = setHeader();
+            assert.isString(value);
+          })
+          it('should include Su for sunday', () => {
+            value = setHeader()
+            expect(value).to.include("Su")
+          })
+          it('should include Fr for Friday', () => {
+            value = setHeader()
+            expect(value).to.include("Fr")
+          })
+        })
+})
